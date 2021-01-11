@@ -1,0 +1,15 @@
+@mixin button-primary() {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: white;
+  background-color: $color-primary;
+  padding: 0rem 1.2rem;
+  cursor: pointer;
+  box-shadow: none;
+  min-width: 8rem;
+
+  &:hover {
+    background-color: #992337;
+    transition: all 0.05s linear;
+  }
+}

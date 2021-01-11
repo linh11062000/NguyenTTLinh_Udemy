@@ -1,0 +1,42 @@
+.cover {
+  background-image: url(../images/cover.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50rem;
+  display: flex;
+  align-items: center;
+  .item {
+    h1 {
+      @include text(white, 4.5rem, bold);
+    }
+    p {
+      @include text(white, 1.8rem, 400);
+      line-height: 3rem;
+      margin: 2rem 0;
+    }
+    .form-search {
+      @include form-search();
+      .form-control {
+        padding: 2.5rem;
+        font-size: 2rem;
+        font-weight: 400;
+      }
+    }
+  }
+  @media (max-width: $xs) {
+    .item {
+      h1 {
+        font-size: 3.5rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+      .form-search {
+        .form-control {
+          padding: 2rem;
+        }
+      }
+    }
+  }
+}

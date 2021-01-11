@@ -1,0 +1,110 @@
+.feedback {
+  background-color: #f7f8fa;
+  padding-top: 3rem;
+  .feedback_top {
+    .heading {
+      margin-bottom: 2rem;
+    }
+    .feedback_slick {
+      .card {
+        min-height: 27rem;
+        margin-right: 1.5rem;
+        padding: 4rem 2rem 1rem;
+        .card-top {
+          display: flex;
+          align-items: center;
+          img {
+            border-radius: 50%;
+            margin-right: 2rem;
+            width: 6.4rem;
+          }
+          .name {
+            font-weight: 700;
+            font-size: 1.8rem;
+          }
+        }
+        .card-body {
+          padding: 0;
+          margin-top: 1rem;
+          .content {
+            line-height: 2rem;
+          }
+        }
+      }
+
+      .slick-prev::before,
+      .slick-next::before {
+        display: none;
+      }
+      .slick-prev,
+      .slick-next {
+        color: #007791;
+        box-shadow: $color-box-shadow;
+        font-size: 2rem;
+        border-radius: 50%;
+        width: 4rem;
+        height: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        background-color: white;
+        &:hover {
+          box-shadow: $color-box-shadow-hover;
+        }
+      }
+      .slick-prev {
+        left: -2.5rem;
+      }
+      .slick-next {
+        right: -1.5rem;
+      }
+      .slick-disabled {
+        display: none !important;
+      }
+    }
+  }
+
+  .feedback_bottom {
+    margin: 4rem 0;
+    .partners {
+      .partners_text {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: $color-text-2;
+      }
+      .partners_logo {
+        margin-bottom: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .logo_item {
+          margin: 0 4rem 1rem;
+        }
+      }
+    }
+    .student-cta {
+      .student-cta_col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 3rem;
+        .heading {
+          color: $color-text-header;
+          font-size: 2rem;
+          font-weight: 700;
+        }
+        .content {
+          max-width: 40rem;
+          width: 100%;
+          margin: 2.5rem 0;
+          line-height: 2.5rem;
+        }
+        .btn_primary {
+          @include button_primary();
+        }
+      }
+    }
+  }
+}

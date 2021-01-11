@@ -1,0 +1,122 @@
+@mixin form-search() {
+  .form-control {
+    padding: 2rem;
+    background-color: $color-grey;
+    border: 1px solid $color-grey;
+    transition: none;
+    font-size: 1.3rem;
+
+    &:focus {
+      background-color: white;
+      border: 1px solid $color-border-grey;
+      border-right: none;
+      box-shadow: none;
+    }
+    &:focus + .input-group-append {
+      .input-group-text {
+        background-color: white;
+        color: $color-primary;
+        border: 1px solid $color-border-grey;
+        border-left: none;
+        &:hover {
+          background-color: $color-primary;
+          color: white;
+        }
+      }
+    }
+  }
+  .input-group-text {
+    padding: 0 1.8rem;
+    border-color: transparent;
+    background-color: $color-grey;
+    color: $color-primary;
+    font-size: 1.6rem;
+
+    &:hover {
+      background-color: $color-primary;
+      cursor: pointer;
+      color: white;
+    }
+  }
+}
+@mixin text($color, $font-size, $font-weight) {
+  color: $color;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+@mixin myDropdown() {
+  position: absolute;
+  right: 0;
+  top: 6rem;
+  width: 34rem;
+  transition: all 0.2s linear;
+  z-index: 9999;
+  background-color: white;
+  &::before {
+    content: "";
+    border-style: solid;
+    border-width: 0 1rem 1rem;
+    position: absolute;
+    top: -1rem;
+    right: 2rem;
+    border-color: transparent transparent $color-border-grey-light transparent;
+  }
+  &::after {
+    content: "";
+    border-style: solid;
+    border-width: 0 1rem 1rem;
+    position: absolute;
+    top: -1rem;
+    right: 2rem;
+    border-color: transparent transparent white transparent;
+  }
+
+  .detail {
+    padding: 2.4rem 1.6rem;
+    box-shadow: 0 4px 16px rgba(20, 23, 28, 0.25);
+    text-align: center;
+    p {
+      color: $color-text-header;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      margin-bottom: 2rem;
+    }
+    a {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #007791;
+      &:hover {
+        color: #003845;
+      }
+    }
+  }
+  display: none;
+}
+@mixin button_primary() {
+  font-size: 1.7rem;
+  color: white;
+  background-color: $color-primary;
+  padding: 1rem 2rem;
+  &:hover {
+    background-color: #992337;
+  }
+}
+@mixin mediaQuery($type) {
+  @if ($type == $xs) {
+    @media (max-width: $xs) {
+      @content;
+    }
+  } @else if($type == $sm) {
+    @media (max-width: $sm) {
+      @content;
+    }
+  } @else if($type == $md) {
+    @media (max-width: $md) {
+      @content;
+    }
+  } @else if($type == $lg) {
+    @media (max-width: $lg) {
+      @content;
+    }
+  }
+}

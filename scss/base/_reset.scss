@@ -1,0 +1,35 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.5rem;
+  color: #29303b;
+  line-height: 1.43rem;
+  font-family: "Roboto", sans-serif;
+}
+
+:focus {
+  outline: none;
+}
+
+a {
+  color: #29303b;
+  &:hover {
+    text-decoration: none;
+    color: #29303b;
+  }
+}
+
+.btn:focus,
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+p {
+  margin-bottom: 0;
+}
+h2 {
+  padding-bottom: 5px;
+}
